@@ -18,8 +18,23 @@ class InsertEditActivity : AppCompatActivity() {
         if(nuevoTrabajador.equals(Constants.SI)){
 
         }else{
-
+            trabajador.id = intent.getIntExtra(Constants.ID, 0)
+            trabajador.name = intent.getStringExtra(Constants.NOMBRE)
+            ieaNombre.setText(trabajador.name)
+            trabajador.puesto = intent.getStringExtra(Constants.PUESTO)
+            ieaPuesto.setText(trabajador.puesto)
+            trabajador.antiguedad = intent.getStringExtra(Constants.ANTIGUEDAD)
+            ieaAntiguedad.setText(trabajador.antiguedad)
         }
+
+        ieaBorrar.setOnClickListener({
+            if(nuevoTrabajador.equals(Constants.SI)){
+
+            }else{
+                TrabajadorDB.getDatabase(applicationContext).trabajadorDAO().deleteWorker(trabajador)
+                finish()
+            }
+        })
 
         ieaSalvar.setOnClickListener({
             var trabajadorSalvar = Trabajador(0,
@@ -31,7 +46,9 @@ class InsertEditActivity : AppCompatActivity() {
                 TrabajadorDB.getDatabase(applicationContext).trabajadorDAO().insertTrabajador(trabajadorSalvar)
                 finish()
             }else{
-
+                trabajadorSalvar.id = trabajador.id
+                TrabajadorDB.getDatabase(applicationContext).trabajadorDAO().updateWorker(trabajadorSalvar)
+                finish()
             }
         })
 
