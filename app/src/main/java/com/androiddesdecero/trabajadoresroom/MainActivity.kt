@@ -18,5 +18,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         })
 
+        maBtTodosTrabajadores.setOnClickListener({
+            val intent = Intent(applicationContext, TrabajadoresActivity::class.java)
+            startActivity(intent)
+        })
+
     }
 }
