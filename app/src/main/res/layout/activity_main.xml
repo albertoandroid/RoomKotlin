@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.androiddesdecero.trabajadoresroom.MainActivity">
+
+    <Button
+        android:id="@+id/maBtTodosTrabajadores"
+        android:text="Ver Trabajadores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/maBtInsertarTrabajador"
+        android:text="Insertar Trabajador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/maBtBorrarTodos"
+        android:text="Borrar Todos los Trabajadores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/maEtBuscar"
+        android:hint="Introduce Nombre a Buscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/maBtBuscarNombre"
+        android:text="Buscar Por Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
